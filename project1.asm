@@ -10,10 +10,10 @@ string  db  200 dup (" ")
 point_buffer dd string
 
 errorMes db  0ah,0dh,'Not allowed any more! ','$'
-mes    db   0ah,0dh,'Type 1 to crypt, type 2 to decrypt! ','$'
-mes1   db   0ah,0dh,'Crypted one time: ','$'
-mes2   db   0ah,0dh,'Crypted two times: ','$'
-mes3   db   0ah,0dh,'Crypted 3 times: ','$'
+mes    db   0ah,0dh,'Type 1 to encrypt, type 2 to decrypt! ','$'
+mes1   db   0ah,0dh,'Encrypted one time: ','$'
+mes2   db   0ah,0dh,'Encrypted two times: ','$'
+mes3   db   0ah,0dh,'Encrypted 3 times: ','$'
 mes4   db   0ah,0dh,'Decrypted: ','$'
 
 count  db   0
@@ -45,7 +45,7 @@ mov ah,3eh
 int 21h
 jc  exit
 nop
-;Now crypt and decrypt
+;Now encrypt and decrypt
 jmp ask
 crypt1: 
 ;test
